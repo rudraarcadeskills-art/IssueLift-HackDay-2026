@@ -1,0 +1,31 @@
+{
+  "id": "fixture-05",
+  "title": "Truncated Repository Tree Context",
+  "description": "Tests that when GitHub tree response indicates truncation, the radar sets status to 'SCAN INCOMPLETE / UNKNOWN' and readiness reflects evidence limitations.",
+  "invariant_tested": "Truncated file tree must yield SCAN INCOMPLETE / UNKNOWN and prevent confident negative claims.",
+  "input": {
+    "issue_metadata": {
+      "url": "https://github.com/monorepo/huge/issues/300",
+      "owner": "monorepo",
+      "repo": "huge",
+      "number": 300,
+      "title": "Fix memory leak in background worker",
+      "body": "- [ ] Identify uncollected event listeners in worker thread",
+      "state": "open",
+      "assignees": [],
+      "labels": [],
+      "has_linked_pr_signal": false,
+      "default_branch": "main",
+      "checked_at": "2026-10-26T12:00:00Z"
+    },
+    "repository_files": [
+      "services/worker/index.ts",
+      "package.json"
+    ],
+    "is_tree_truncated": true
+  },
+  "expected_outcome": {
+    "verdict": "EVIDENCE-LIMITED",
+    "test_evidence_status": "SCAN INCOMPLETE / UNKNOWN"
+  }
+}

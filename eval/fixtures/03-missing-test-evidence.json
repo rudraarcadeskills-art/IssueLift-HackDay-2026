@@ -1,0 +1,31 @@
+{
+  "id": "fixture-03",
+  "title": "No Test Evidence in Bounded Scanned Context",
+  "description": "Tests that when no test files appear in the scanned repository tree, the radar reports 'NO TEST EVIDENCE FOUND IN SCANNED FILES' instead of claiming 'no tests exist'.",
+  "invariant_tested": "Must say 'NO TEST EVIDENCE FOUND IN SCANNED FILES' and never assert global absence of tests or 0% coverage.",
+  "input": {
+    "issue_metadata": {
+      "url": "https://github.com/example/lib/issues/88",
+      "owner": "example",
+      "repo": "lib",
+      "number": 88,
+      "title": "Refactor logger interface",
+      "body": "- [ ] Update Logger interface to accept context parameter",
+      "state": "open",
+      "assignees": [],
+      "labels": [],
+      "has_linked_pr_signal": false,
+      "default_branch": "main",
+      "checked_at": "2026-10-26T12:00:00Z"
+    },
+    "repository_files": [
+      "src/logger.ts",
+      "src/types.ts",
+      "package.json"
+    ],
+    "is_tree_truncated": false
+  },
+  "expected_outcome": {
+    "test_evidence_status": "NO TEST EVIDENCE FOUND IN SCANNED FILES"
+  }
+}

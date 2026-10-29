@@ -1,0 +1,30 @@
+name: Bug Report
+description: Create a report to help us improve IssueLift
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for reporting an issue! Please describe the problem clearly.
+  - type: input
+    id: issue_url
+    attributes:
+      label: Target GitHub Issue URL
+      description: The public issue URL you attempted to scan.
+      placeholder: https://github.com/owner/repo/issues/123
+    validations:
+      required: false
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the Bug
+      description: A clear and concise description of what went wrong.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What you expected to happen according to IssueLift invariants.
+    validations:
+      required: true

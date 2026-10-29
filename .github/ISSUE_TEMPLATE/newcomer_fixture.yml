@@ -1,0 +1,29 @@
+name: Propose ProofBench Fixture
+description: Suggest a new deterministic test case or counterexample for ProofBench
+title: "[Fixture]: "
+labels: ["proofbench", "good first issue"]
+body:
+  - type: markdown
+    attributes:
+      value: ProofBench is open to community counterexamples. Submit a fixture to help test Claim Gate invariants!
+  - type: input
+    id: issue_url
+    attributes:
+      label: Real Public Issue URL
+      description: The public issue demonstrating this edge case.
+    validations:
+      required: true
+  - type: textarea
+    id: invariant
+    attributes:
+      label: Guardrail Invariant Tested
+      description: What specific invariant rule should the Claim Gate or TraceMap enforce? (e.g. Reject hallucinated path, separate explicit quote, report bounded scan caveat)
+    validations:
+      required: true
+  - type: textarea
+    id: expected_outcome
+    attributes:
+      label: Expected Outcome
+      description: What readiness verdict, test status, or audit warning is expected?
+    validations:
+      required: true

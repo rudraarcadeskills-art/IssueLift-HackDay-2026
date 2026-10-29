@@ -1,0 +1,30 @@
+{
+  "id": "fixture-07",
+  "title": "Missing Setup Documentation (README/CONTRIBUTING)",
+  "description": "Tests that when a repository lacks README or CONTRIBUTING documentation, setup commands remain unverified and are not fabricated.",
+  "invariant_tested": "Setup status remains unknown / undocumented; no command is fabricated or labelled DOCUMENTED.",
+  "input": {
+    "issue_metadata": {
+      "url": "https://github.com/nodocs/repo/issues/1",
+      "owner": "nodocs",
+      "repo": "repo",
+      "number": 1,
+      "title": "Initial bug report",
+      "body": "Fix null pointer on boot",
+      "state": "open",
+      "assignees": [],
+      "labels": [],
+      "has_linked_pr_signal": false,
+      "default_branch": "main",
+      "checked_at": "2026-10-26T12:00:00Z"
+    },
+    "repository_files": [
+      "main.c",
+      "Makefile"
+    ],
+    "is_tree_truncated": false
+  },
+  "expected_outcome": {
+    "setup_command_label": "UNKNOWN"
+  }
+}

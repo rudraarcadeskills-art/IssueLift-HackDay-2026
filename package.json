@@ -1,0 +1,40 @@
+{
+  "name": "issuelift",
+  "version": "1.3.0",
+  "private": true,
+  "description": "Pre-contribution evidence-to-test contract compiler and proof engine for open source newcomers",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "eval": "node scripts/run-proofbench.mjs",
+    "eval:proofbench": "node scripts/run-proofbench.mjs",
+    "generate:pptx": "node scripts/generate-deck.mjs"
+  },
+  "dependencies": {
+    "@google/genai": "^2.31.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.475.0",
+    "next": "^15.1.7",
+    "pptxgenjs": "^3.12.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^2.6.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.1",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.19.0",
+    "eslint-config-next": "^15.1.7",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.5"
+  }
+}

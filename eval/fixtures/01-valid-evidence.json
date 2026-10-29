@@ -1,0 +1,35 @@
+{
+  "id": "fixture-01",
+  "title": "Valid Criterion + Verified Source and Test Evidence",
+  "description": "Tests that a well-defined issue with explicit acceptance criteria correctly validates existing repository paths and test evidence.",
+  "invariant_tested": "Verified paths and source IDs must be confirmed against the repository tree and marked VERIFIED.",
+  "input": {
+    "issue_metadata": {
+      "url": "https://github.com/facebook/react/issues/1000",
+      "owner": "facebook",
+      "repo": "react",
+      "number": 1000,
+      "title": "Add support for custom DOM attribute prefix",
+      "body": "We need custom DOM attribute prefix handling.\n- [ ] Attribute parser must support data-custom-* attributes\n- [ ] Emit warning if attribute syntax is invalid",
+      "state": "open",
+      "assignees": [],
+      "labels": [{ "name": "enhancement", "color": "a2eeef" }],
+      "has_linked_pr_signal": false,
+      "default_branch": "main",
+      "checked_at": "2026-10-26T12:00:00Z"
+    },
+    "repository_files": [
+      "packages/react-dom/src/shared/DOMProperty.js",
+      "packages/react-dom/src/__tests__/DOMProperty-test.js",
+      "package.json",
+      "README.md"
+    ],
+    "is_tree_truncated": false
+  },
+  "expected_outcome": {
+    "verdict": "ACTIONABLE",
+    "has_rejected_paths": false,
+    "has_rejected_ids": false,
+    "test_evidence_status": "TEST EVIDENCE FOUND"
+  }
+}
