@@ -131,3 +131,13 @@ ProofBench is separate from the Vitest unit-test suite and runs without an API k
 ## License
 
 The project source code is released under the MIT License. Google Gemma model weights and API usage remain subject to Google’s Gemma Terms of Use.
+
+## AI Development Tools Disclosure
+
+IssueLift was developed with assistance from AI tools.
+
+- **Antigravity:** AI coding agent used for implementation and development.
+- **ChatGPT:** Used for project planning, prompt preparation, debugging guidance, and code review.
+- **Google Gemma 4:** Integrated into the application for issue analysis and Contribution Contract generation.
+
+All final project changes were tested and reviewed before submission.
